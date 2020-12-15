@@ -47,6 +47,6 @@ resource "hcloud_server" "control_plane" {
 resource "hcloud_volume" "storages" {
   name       = "${var.kae_cluster_name}-storage-${count.index + 1}"
   size       = 150
-  count      = var.kae_worker_replicas
+  count      = var.kae_workers_replicas
   location   = var.kae_datacenter
 }
